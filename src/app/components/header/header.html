@@ -1,0 +1,29 @@
+<nav>
+    <picture>
+        <img src="../../../assets/img/logo-blanco.jpeg" alt="Logo">
+    </picture>
+
+    <button class="hamburger" (click)="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </button>
+    
+    <ul  [class.active]="menuAbierto">
+        <li>
+            <a href="" routerLink="/rutas">Rutas</a>
+        </li>
+        <li>
+            <a href="" routerLink="/tienda">Tienda</a>
+        </li>
+        <li>
+            <a href="" routerLink="/eventos">Eventos</a>
+        </li>
+        <li>
+            <a href="" routerLink="/alfareros">Alfareros</a>
+        </li>
+        <li>
+            <a href="" routerLink="/contacto">Contacto</a>
+        </li>
+    </ul>
+</nav>

@@ -1,0 +1,120 @@
+img {
+    width: 100px;
+}
+
+nav{
+    display: flex;
+    width: 99%;
+    height: 100px;
+    justify-content: space-between;
+    margin: 10px;
+    padding: 50px;
+    align-items: center;
+    ul {
+        display: flex;
+        gap: 20px;    
+
+        li{
+            a{
+                font-size: 20px;
+                cursor: pointer;
+                padding: 6px 20px;
+                border-radius: 10px;
+                transition: 0.3s;
+                border: 2px solid transparent;
+                text-decoration: none;
+                color: black;
+    
+                &:hover{
+                        background-color:  rgba(204, 148, 44, 0.685) ;
+                        border: 2px solid rgb(25, 127, 212) ;
+                        color:rgb(12, 63, 104);
+                    
+                    }
+    
+                .active {
+                        background-color:  rgba(204, 148, 44, 0.685) ;
+                        border: 2px solid rgb(25, 127, 212) ;
+                        color:rgb(12, 63, 104);
+                }
+            }
+
+            }
+    }
+}
+
+.hamburger {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    nav {
+        display: flex;
+        justify-content:space-between;
+        gap: 10px;
+        position: relative;
+        
+        ul {
+            opacity: 0;
+            transition: 0.5s;
+            flex-direction: column;
+            position: absolute;
+            top: 110%;
+            right: 0px;
+            background-color: rgba(204, 148, 44, 0.685);
+            padding: 10px 0px;
+            border-radius: 8px;
+            gap: 25px;
+            backdrop-filter: blur(2px);
+            width: 50vw;
+            align-items: center;
+            z-index: 1;
+
+            li{
+                text-align: center;
+                padding-bottom: 10px;
+                border-bottom: 2px solid white;
+                border-left: 2px solid rgb(25, 127, 212);
+                border-right: 2px solid rgb(25, 127, 212);
+                border-radius: 10px;
+                width: 70%;
+
+            }
+
+        }
+        
+        ul li a:hover {
+        background-color: transparent; 
+        border: 2px solid transparent;
+        color: black; 
+
+        }
+        
+        ul.active {
+        opacity: 1;
+        flex-direction: column;
+    }
+
+    }
+    .hamburger {
+        display: block;
+    }
+
+
+    button {
+        border: 2px solid black;
+        border-radius: 50%;
+        padding: 6px;
+        background-color:rgb(204, 147, 44);
+    }
+
+    div{
+        width: 20px;
+        height: 3px;
+        border-radius: 10px;
+        margin: 5px;
+        background-color:   rgb(25, 127, 212) ;
+        border-bottom: 1px solid white;
+    }
+}
+
