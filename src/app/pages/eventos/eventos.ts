@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
-import { Hero } from "../../components/hero/hero";
 
 @Component({
   selector: 'app-eventos',
-  imports: [ Hero],
+  imports: [ ],
   templateUrl: './eventos.html',
   styleUrl: './eventos.css'
 })
