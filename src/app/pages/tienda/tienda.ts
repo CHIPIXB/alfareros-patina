@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { HeroHome } from "../../components/hero-home/hero-home";
+import { Hero } from "../../components/hero/hero";
 
 @Component({
   selector: 'app-tienda',
-  imports: [HeroHome],
+  imports: [Hero],
   templateUrl: './tienda.html',
   styleUrl: './tienda.css'
 })
