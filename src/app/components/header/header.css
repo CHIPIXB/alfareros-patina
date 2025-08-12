@@ -1,15 +1,30 @@
 img {
     width: 100px;
+    cursor: pointer;
 }
 
 nav{
     display: flex;
-    width: 99%;
+    width: 99vw;
     height: 100px;
     justify-content: space-between;
-    margin: 10px;
     padding: 50px;
+    text-align: center;
     align-items: center;
+    a{
+        font-family: "Chicle", serif;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        margin-top: 15px;
+        font-size: 30px;
+        text-decoration: none;
+        color:  rgb(25, 127, 212) ;
+
+        .logo-texto {
+            margin-left: 10px;
+        }
+    }
     ul {
         display: flex;
         gap: 20px;    
@@ -24,12 +39,12 @@ nav{
                 border: 2px solid transparent;
                 text-decoration: none;
                 color: black;
+                font-family: "Finger Paint", sans-serif;
     
                 &:hover{
-                        background-color:  rgba(204, 148, 44, 0.685) ;
+                        background-color:  rgba(245, 184, 71, 0.836) ;
                         border: 2px solid rgb(25, 127, 212) ;
                         color:rgb(12, 63, 104);
-                    
                     }
     
                 .active {
@@ -41,18 +56,20 @@ nav{
 
             }
     }
+
 }
 
-.hamburger {
+.hamburguesa {
     display: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
     nav {
         display: flex;
         justify-content:space-between;
         gap: 10px;
         position: relative;
+
         
         ul {
             opacity: 0;
@@ -96,7 +113,7 @@ nav{
     }
 
     }
-    .hamburger {
+    .hamburguesa {
         display: block;
     }
 
@@ -115,6 +132,14 @@ nav{
         margin: 5px;
         background-color:   rgb(25, 127, 212) ;
         border-bottom: 1px solid white;
+    }
+}
+
+@media (max-width: 425px) {
+    nav{
+        ul{
+            width: 70vw;
+        }
     }
 }
 
