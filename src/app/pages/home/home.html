@@ -25,8 +25,12 @@
 
 <section class="imagenes-hero">
     <figure class="container">
-        <img src="../../../assets/img/portada-rutas.jpeg" alt="rutas-alfareras">
-        <img src="../../../assets/img/portada-tienda.png" alt="tienda-alfarera">
+        <a [routerLink]="['/rutas']">
+            <img src="../../../assets/img/portada-rutas.jpeg" alt="rutas-alfareras">
+        </a>
+        <a [routerLink]="['/tienda']">
+            <img src="../../../assets/img/portada-tienda.png" alt="tienda-alfarera">
+        </a>
     </figure>
 </section>
 
