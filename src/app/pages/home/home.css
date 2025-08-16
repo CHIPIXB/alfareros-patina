@@ -1,3 +1,23 @@
+h3{
+        font-family: "Just Another Hand", cursive;
+        margin: 50px 0 0 0;
+        font-size: 30px;
+        color:  rgb(25, 127, 212);
+        text-align: center;
+    }
+
+h6{
+    font-family: "Just Another Hand", cursive;
+    text-align: center;
+    color: rgb(204, 148, 44);
+    margin: 15px;
+}
+
+strong{
+    color: rgb(204, 148, 44);
+}
+
+
 .fondo-hero {
     background-image: url(../../../assets/img/hero.png);
     width: 100%;
@@ -32,6 +52,7 @@
         margin: 15px;
         font-size: 40px;
         color:  rgb(25, 127, 212);
+        
     }
 
     .parrafos {
@@ -39,12 +60,12 @@
         text-align: center;
         align-items: center;
         justify-self: center;
+        text-align: justify;
+        line-height: 1.4;
+
         p{
             font-family: "Patrick Hand", cursive;
-            font-size: 25px;
-            strong{
-                color:    rgb(204, 148, 44);
-            }
+            font-size: 22px;
         }
     }
 
@@ -57,17 +78,53 @@
         height: auto;
         display: block;
         object-fit: cover;
-        margin: 30px 0;
+        margin: 20px 0;
     }
 
 }
 
-@media (min-width: 1024px){
-    .sobre-nosotros{
-        .parrafos{
-            text-align: justify;
+.eventos-hero {
+    font-family: "Patrick Hand", cursive;
+
+    figure{
+        text-align: center;
+    }
+
+    h5{
+        font-size: 22px;
+        color:  rgb(25, 127, 212);
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    div figure a img {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+    }
+
+    .texto-evento {
+        margin: 20px;
+    }
+
+    button {
+        background-color:  rgb(25, 127, 212);
+        border-radius: 8px;
+        border: 2px solid  rgb(25, 127, 212) ;
+        transition: 0.5s;
+        padding: 8px 15px;
+
+        &:hover{
+            color:  white;
+            background-color:  rgb(180, 131, 39) ;
+            border: 2px solid  rgb(180, 131, 39);
         }
     }
+}
+
+@media (min-width: 1024px){
 
     .imagenes-hero {
         figure{
@@ -82,7 +139,7 @@
 
         img{
             width: 100%;
-            height: auto;
+            height: 400px;
             display: block;
             object-fit: cover;
         }

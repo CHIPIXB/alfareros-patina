@@ -8,7 +8,6 @@
 
 </section>
 
-
 <section class="sobre-nosotros container">
     <div class="texto-sobre-nosotros">
         <h3>Sobre nosotros</h3>
@@ -21,16 +20,72 @@
 
 </section>
 
-
-
 <section class="imagenes-hero">
+
     <figure class="container">
-        <a [routerLink]="['/rutas']">
-            <img src="../../../assets/img/portada-rutas.jpeg" alt="rutas-alfareras">
-        </a>
-        <a [routerLink]="['/tienda']">
-            <img src="../../../assets/img/portada-tienda.png" alt="tienda-alfarera">
-        </a>
+        <div>
+            <hgroup>
+                <h3>Rutas</h3>
+                <h6>¿Quieres saber más? ¡Pincha en la imagen!</h6>
+            </hgroup>
+    
+            <a [routerLink]="['/rutas']">
+                <img src="../../../assets/img/portada-rutas.jpeg" alt="rutas-alfareras">
+            </a>
+        </div>
+        <div>
+            <hgroup>
+                <h3>Tienda</h3>
+                <h6>¿Quieres saber más? ¡Pincha en la imagen!</h6>
+            </hgroup>
+            <a [routerLink]="['/tienda']">
+                <img src="../../../assets/img/portada-tienda.png" alt="tienda-alfarera">
+            </a>
+
+        </div>
     </figure>
+
 </section>
 
+<section class="eventos-hero">
+    <h3>Eventos</h3>
+    <h6>Muchas actividades y eventos por venir</h6>
+    <div>
+        <article>
+            <figure>
+                <a href="">
+                    <img src="../../../assets/img/aniversario-alfarero.png" alt="">
+                </a>
+            </figure>
+            <div class="texto-evento">
+                <h5>Aniversario Alfareros Patina - 2025</h5>
+                <p>Primer aniversario de <strong>Alfareros Patina</strong>. Juegos, graffiti y rutas. Junio 2025. </p>
+                <button routerLink="/eventos/aniversario-alfarero">Ver más</button>
+            </div>
+        </article>
+        <article>
+            <figure>
+                <a href="">
+                    <img src="../../../assets/img/acho-tour.png" alt="">
+                </a>
+            </figure>
+            <div class="texto-evento">
+                <h5>Achotour - Murcia - 2025</h5>
+                <p>Viaje a Murcia al evento <strong>Achotour</strong>. Febrero 2025. </p>
+                <button routerLink="/eventos/acho-tour">Ver más</button>
+            </div>
+        </article>
+        <article>
+            <figure>
+                <a href="">
+                    <img src="../../../assets/img/malaga-vibes.png" alt="">
+                </a>
+            </figure>
+            <div class="texto-evento">
+                <h5>Málaga Vibes - 2024</h5>
+                <p>Viaje a Málaga al evento <strong>Málaga Vibes</strong>. Noviembre 2024.</p>
+                <button routerLink="/eventos/malaga-vibes">Ver más</button>
+            </div>
+        </article>
+    </div>
+</section>
