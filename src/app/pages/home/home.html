@@ -23,34 +23,38 @@
 <section class="imagenes-hero">
 
     <figure class="container">
-        <div>
+        <div class="texto-imagen">
             <hgroup>
                 <h3>Rutas</h3>
                 <h6>¿Quieres saber más? ¡Pincha en la imagen!</h6>
             </hgroup>
-    
-            <a [routerLink]="['/rutas']">
-                <img src="../../../assets/img/portada-rutas.jpeg" alt="rutas-alfareras">
-            </a>
+
+            <nav>
+                <a [routerLink]="['/rutas']">
+                    <img src="../../../assets/img/portada-rutas.jpeg" alt="rutas-alfareras">
+                </a>
+            </nav>
         </div>
-        <div>
+        <div class="texto-imagen">
             <hgroup>
                 <h3>Tienda</h3>
                 <h6>¿Quieres saber más? ¡Pincha en la imagen!</h6>
             </hgroup>
-            <a [routerLink]="['/tienda']">
-                <img src="../../../assets/img/portada-tienda.png" alt="tienda-alfarera">
-            </a>
+            <nav>
+                <a [routerLink]="['/tienda']">
+                    <img src="../../../assets/img/portada-tienda.png" alt="tienda-alfarera">
+                </a>
+            </nav>
 
         </div>
     </figure>
 
 </section>
 
-<section class="eventos-hero">
+<section class="eventos-hero container">
     <h3>Eventos</h3>
     <h6>Muchas actividades y eventos por venir</h6>
-    <div>
+    <div class="eventos-lista">
         <article>
             <figure>
                 <a href="">
@@ -59,7 +63,7 @@
             </figure>
             <div class="texto-evento">
                 <h5>Aniversario Alfareros Patina - 2025</h5>
-                <p>Primer aniversario de <strong>Alfareros Patina</strong>. Juegos, graffiti y rutas. Junio 2025. </p>
+                <p>Primer aniversario de <strong>Alfareros Patina</strong> en Alcorcón. Juegos, graffiti y rutas. Junio 2025. </p>
                 <button routerLink="/eventos/aniversario-alfarero">Ver más</button>
             </div>
         </article>
@@ -71,7 +75,7 @@
             </figure>
             <div class="texto-evento">
                 <h5>Achotour - Murcia - 2025</h5>
-                <p>Viaje a Murcia al evento <strong>Achotour</strong>. Febrero 2025. </p>
+                <p>Viaje a Murcia para el evento <strong>Achotour</strong>. Febrero 2025. </p>
                 <button routerLink="/eventos/acho-tour">Ver más</button>
             </div>
         </article>
@@ -83,7 +87,7 @@
             </figure>
             <div class="texto-evento">
                 <h5>Málaga Vibes - 2024</h5>
-                <p>Viaje a Málaga al evento <strong>Málaga Vibes</strong>. Noviembre 2024.</p>
+                <p>Viaje a Málaga para el evento <strong>Málaga Vibes</strong>. Noviembre 2024.</p>
                 <button routerLink="/eventos/malaga-vibes">Ver más</button>
             </div>
         </article>

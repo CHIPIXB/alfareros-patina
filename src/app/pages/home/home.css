@@ -85,9 +85,18 @@ strong{
 
 .eventos-hero {
     font-family: "Patrick Hand", cursive;
+    place-items: center;
+    article {
+        display: flex;
+        margin: 50px 20px;
+    }
 
     figure{
-        text-align: center;
+        align-self: center;
+    }
+    
+    img {
+        border-radius: 10px;
     }
 
     h5{
@@ -97,6 +106,7 @@ strong{
 
     p {
         font-size: 18px;
+        margin: 20px 0;
     }
 
     div figure a img {
@@ -106,7 +116,7 @@ strong{
     }
 
     .texto-evento {
-        margin: 20px;
+        margin: 0 20px;
     }
 
     button {
@@ -116,7 +126,40 @@ strong{
         transition: 0.5s;
         padding: 8px 15px;
 
-        &:hover{
+    }
+}
+
+@media (min-width: 768px){
+    .imagenes-hero {
+        a {
+            img{
+                width: 500px;
+                height: 400px;
+            }
+        }
+        .texto-imagen {
+            justify-self: center;
+        }
+        
+    }
+}
+
+@media (min-width: 992px){
+        .imagenes-hero {
+        a {
+            img{
+                width: 600px;
+                height: 400px;
+            }
+        }
+        
+    }
+}
+
+@media (min-width: 1024px){
+
+    .eventos-hero {
+        button:hover {
             color:  white;
             background-color:  rgb(180, 131, 39) ;
             border: 2px solid  rgb(180, 131, 39);
@@ -124,24 +167,75 @@ strong{
     }
 }
 
-@media (min-width: 1024px){
-
+@media ( min-width: 1200px) {
     .imagenes-hero {
         figure{
             display: flex;
+            
+            }
+            div .texto-imagen {
+                width: 600px;
+            }
         }
+}
 
-        a{
-            display: inline-flex;
+@media (min-width: 1440px){
+
+    .imagenes-hero {
+        figure{
             place-content: center;
-            margin: 0 40px;
         }
-
-        img{
-            width: 100%;
-            height: 400px;
-            display: block;
-            object-fit: cover;
+        img {
+            width: 500px;
         }
     }
+
+    .eventos-hero {
+    font-family: "Patrick Hand", cursive;
+
+    .eventos-lista {
+        display: flex;
+    }
+    article {
+        display: flex;
+        margin: 50px 20px;
+    }
+
+    figure{
+        align-self: center;
+    }
+    
+    img {
+        border-radius: 10px;
+    }
+
+    h5{
+        font-size: 22px;
+        color:  rgb(25, 127, 212);
+    }
+
+    p {
+        font-size: 18px;
+        margin: 20px 0;
+    }
+
+    div figure a img {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+    }
+
+    .texto-evento {
+        margin: 0 20px;
+    }
+
+    button {
+        background-color:  rgb(25, 127, 212);
+        border-radius: 8px;
+        border: 2px solid  rgb(25, 127, 212) ;
+        transition: 0.5s;
+        padding: 8px 15px;
+
+    }
+}
 }
