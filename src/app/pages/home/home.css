@@ -17,6 +17,9 @@ strong{
     color: rgb(204, 148, 44);
 }
 
+strong.titulo {
+    color:  rgb(25, 127, 212);
+}
 
 .fondo-hero {
     background-image: url(../../../assets/img/hero.png);
@@ -73,12 +76,15 @@ strong{
 
 .imagenes-hero {
     
+
     img{
-        width: 100%;
+        max-width: 100%;
         height: auto;
         display: block;
         object-fit: cover;
-        margin: 20px 0;
+        object-position: center;
+        margin: 0 auto;
+        border-radius: 20px;
     }
 
 }
@@ -87,12 +93,16 @@ strong{
     font-family: "Patrick Hand", cursive;
     place-items: center;
     article {
-        display: flex;
-        margin: 50px 20px;
+        /* display: flex; */
+        margin: 0 auto;
+        max-width: 100%;
+        height: auto;
+        text-align: center;
     }
 
     figure{
-        align-self: center;
+        /* align-self: center; */
+        text-align: center;
     }
     
     img {
@@ -116,7 +126,8 @@ strong{
     }
 
     .texto-evento {
-        margin: 0 20px;
+        margin: 30px;
+        border-bottom: 2px solid rgb(180, 131, 39);
     }
 
     button {
@@ -125,6 +136,7 @@ strong{
         border: 2px solid  rgb(25, 127, 212) ;
         transition: 0.5s;
         padding: 8px 15px;
+        margin-bottom: 20px;
 
     }
 }
