@@ -92,6 +92,11 @@ strong.titulo {
 .eventos-hero {
     font-family: "Patrick Hand", cursive;
     place-items: center;
+
+    .eventos-lista {
+        margin-top: 40px;
+    }
+
     article {
         /* display: flex; */
         margin: 0 auto;
