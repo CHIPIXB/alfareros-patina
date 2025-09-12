@@ -1,25 +1,24 @@
 h3{
-        font-family: "Just Another Hand", cursive;
+        font-family: var(--fuente-titulo);
         margin: 50px 0 0 0;
         font-size: 30px;
-        color:  rgb(25, 127, 212);
+        color:  var(--color-principal);
         text-align: center;
     }
 
 h6{
-    font-family: "Just Another Hand", cursive;
+    font-family: var(--fuente-titulo);
     text-align: center;
-    color: rgb(204, 148, 44);
+    color: var(--color-secundario);
     margin: 15px;
 }
 
 strong{
-    color: rgb(204, 148, 44);
+    color: var(--color-secundario);
 }
 
 strong.titulo {
-    color:  rgb(25, 127, 212);
-}
+    color:  var(--color-principal);}
 
 .fondo-hero {
     background-image: url(../../../assets/img/hero.png);
@@ -34,27 +33,26 @@ strong.titulo {
     bottom: 50%;
     transform: translate(50%, 50%);
     text-align: center;
+    font-family: var(--fuente-titulo-hero);
 
     h1{
-        font-family: "Chicle", serif;
         font-size: 80px;
-        color:  rgb(25, 127, 212);
-    text-shadow: 2px 2px 2px black;
+        color:  var(--color-principal);
+        text-shadow: 2px 2px 2px black;
     }
 
     h2 {
-        font-family: "Chicle", serif;
-        text-shadow: 2px 2px 2px  rgb(180, 131, 39) ;
+        text-shadow: 2px 2px 2px  var(--color-secundario) ;
     }
 }
 
 .sobre-nosotros{
     text-align: center;
     h3{
-        font-family: "Just Another Hand", cursive;
+        font-family: var(--fuente-titulo);
         margin: 15px;
         font-size: 40px;
-        color:  rgb(25, 127, 212);
+        color:  var(--color-principal);
         
     }
 
@@ -67,7 +65,7 @@ strong.titulo {
         line-height: 1.4;
 
         p{
-            font-family: "Patrick Hand", cursive;
+            font-family: var(--fuente-texto);
             font-size: 22px;
         }
     }
@@ -78,19 +76,19 @@ strong.titulo {
     
 
     img{
-        max-width: 100%;
+        max-width: 90%;
         height: auto;
         display: block;
         object-fit: cover;
         object-position: center;
-        margin: 0 auto;
+        margin: 0 20px;
         border-radius: 20px;
     }
 
 }
 
 .eventos-hero {
-    font-family: "Patrick Hand", cursive;
+    font-family: var(--fuente-texto);
     place-items: center;
 
     .eventos-lista {
@@ -116,7 +114,7 @@ strong.titulo {
 
     h5{
         font-size: 22px;
-        color:  rgb(25, 127, 212);
+        color:  var(--color-principal);
     }
 
     p {
@@ -132,13 +130,13 @@ strong.titulo {
 
     .texto-evento {
         margin: 30px;
-        border-bottom: 2px solid rgb(180, 131, 39);
+        border-bottom: 2px solid var(--color-secundario);
     }
 
     button {
-        background-color:  rgb(25, 127, 212);
+        background-color: var(--color-principal);
         border-radius: 8px;
-        border: 2px solid  rgb(25, 127, 212) ;
+        border: 2px solid var(--color-principal);
         transition: 0.5s;
         padding: 8px 15px;
         margin-bottom: 20px;
@@ -178,8 +176,8 @@ strong.titulo {
     .eventos-hero {
         button:hover {
             color:  white;
-            background-color:  rgb(180, 131, 39) ;
-            border: 2px solid  rgb(180, 131, 39);
+            background-color:  var(--color-secundario) ;
+            border: 2px solid var(--color-secundario);
         }
     }
 }
@@ -193,22 +191,7 @@ strong.titulo {
             div .texto-imagen {
                 width: 600px;
             }
-        }
-}
-
-@media (min-width: 1440px){
-
-    .imagenes-hero {
-        figure{
-            place-content: center;
-        }
-        img {
-            width: 500px;
-        }
-    }
-
-    .eventos-hero {
-    font-family: "Patrick Hand", cursive;
+        } 
 
     .eventos-lista {
         display: flex;
@@ -228,7 +211,7 @@ strong.titulo {
 
     h5{
         font-size: 22px;
-        color:  rgb(25, 127, 212);
+        color: var(--color-principal);
     }
 
     p {
@@ -247,12 +230,24 @@ strong.titulo {
     }
 
     button {
-        background-color:  rgb(25, 127, 212);
+        background-color:  var(--color-principal);
         border-radius: 8px;
-        border: 2px solid  rgb(25, 127, 212) ;
+        border: 2px solid var(--color-principal) ;
         transition: 0.5s;
         padding: 8px 15px;
 
     }
 }
+
+@media (min-width: 1440px){
+
+    .imagenes-hero {
+        figure{
+            place-content: center;
+        }
+        img {
+            width: 500px;  
+        }
+    }
+
 }
