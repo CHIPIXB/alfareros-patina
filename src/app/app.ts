@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Event, NavigationEnd, Router, RouterOutlet } from '@angular/router';
 import { Header } from "./components/header/header";
 
 @Component({
@@ -9,5 +9,13 @@ import { Header } from "./components/header/header";
   styleUrl: './app.css'
 })
 export class App {
-  protected title = 'frontend';
+  protected title = 'Alfareros Patina';
+
+  constructor(private router: Router) { 
+    this.router.events.subscribe((event: Event) => {
+      if (event instanceof NavigationEnd) {
+        window.scrollTo(0, 0);
+      }
+    })  
+  }
 }
