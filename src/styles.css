@@ -54,5 +54,13 @@ table {
     box-sizing: border-box;
 }
 
+:root {
+    --color-principal: rgb(25, 127, 212);
+    --color-secundario: rgb(204, 148, 44);
+    --fuente-titulo: "Just Another Hand", cursive;
+    --fuente-texto: "Patrick Hand", cursive;
+    --fuente-titulo-hero: "Chicle", serif;
+}
+
 
 
