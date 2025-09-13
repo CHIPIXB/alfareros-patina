@@ -1,0 +1,51 @@
+<section class="titulo-seccion">
+
+    <hgroup>
+        <h2>HORARIO</h2>
+        <h6>No te quedes sin saber los horarios de las rutas Alfareras</h6>
+    </hgroup>
+    <div>
+        <button (click)="toggle('verano')" class="btn-verano" [class.activo]="activo === 'verano'">Verano</button>
+        <button (click)="toggle('invierno')" class="btn-invierno" [class.activo]="activo === 'invierno'">Invierno</button>
+    </div>
+
+</section>
+
+
+<article class="info container">
+    @if (activo === 'invierno') {
+        <article class="horario-invierno">
+            <div>
+                <i class="fa-solid fa-snowflake"></i>
+                <h3>HORARIO DE INVIERNO</h3>
+                <a  class="btn-whatsapp" href="https://chat.whatsapp.com/Efe5Q7fDTmKDiwziEtD07A?mode=ems_wa_t" target="_blank">
+                <i class="fa-brands fa-whatsapp"></i>
+                </a>
+            </div>
+            <p>El horario de quedada de las <strong>rutas Alfareras</strong> será a las 18:15 h. para salir a las <strong>18:30 h</strong>. Cualquier cambio se comunicará por el grupo de whatsapp</p>
+        </article>
+    }
+
+    @if (activo === 'verano') {
+        <article class="horario-verano">
+            <div>
+                <i class="fa-solid fa-fire"></i>
+                <h3>HORARIO DE VERANO</h3>
+                <a  class="btn-whatsapp" href="https://chat.whatsapp.com/Efe5Q7fDTmKDiwziEtD07A?mode=ems_wa_t" target="_blank">
+                <i class="fa-brands fa-whatsapp"></i>
+                </a>
+            </div>
+            <p>El horario de quedada de las <strong>rutas Alfareras</strong> será a las 20:30 h. para salir a las <strong>20:45 h</strong>.  Cualquier cambio se comunicará por el grupo de whatsapp</p>
+        </article>
+    }
+
+    <article>
+        <div>
+            <i class="fa-solid fa-circle-info"></i>
+            <h3>INFORMACIÓN DE INTERÉS</h3>
+        </div>
+        <p>Todas las <strong>rutas Alfareras</strong> salen <strong>15 minutos</strong> después de la hora de convocatoria. Si alguien se retrasa, se avisará por el <strong>grupo de WhatsApp</strong> y se comunicará al grupo que va a realizar la ruta para valorar si se comienza la ruta y se pasa <strong>ubicación en tiempo real</strong>, o si se espera a la persona en la ubicación indicada.</p>
+    </article>
+
+
+</article>
