@@ -73,11 +73,15 @@ strong.titulo {
 }
 
 .imagenes-hero {
-    
+
+    .images {
+        display: flex;
+        justify-content: center;
+    }
 
     img{
-        max-width: 90%;
-        height: auto;
+        width: 300px;
+        height: 200px;
         display: block;
         object-fit: cover;
         object-position: center;
