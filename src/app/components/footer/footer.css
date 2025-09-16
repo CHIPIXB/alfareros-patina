@@ -1,0 +1,12 @@
+.footer-alfareros {
+    text-align: center;
+    padding: 15px 0;
+    font-family: var(--fuente-titulo);
+    font-size: 14px;
+    color: #525151;
+}
+
+.footer-alfareros .autor {
+    font-weight: 600;
+    color:var(--color-secundario);
+}
