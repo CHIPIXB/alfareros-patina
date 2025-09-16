@@ -1,1 +1,52 @@
-<p>ubicacion-rutas works!</p>
+
+<section class="titulo-seccion">
+
+    <hgroup>
+        <h2>UBICACIÓN</h2>
+        <h6>¿Quieres enterarte desde dónde salen las Alfareras?</h6>
+    </hgroup>
+    <div>
+        <button (click)="toggle('verano')" class="btn-verano" [class.activo]="activo === 'verano'">Verano</button>
+        <button (click)="toggle('invierno')" class="btn-invierno" [class.activo]="activo === 'invierno'">Invierno</button>
+    </div>
+
+</section>
+
+
+<article class="info container">
+    @if (activo === 'invierno') {
+        <article class="ubicacion-invierno">
+            <div>
+                <i class="fa-solid fa-snowflake"></i>
+                <h3>UBICACIÓN DE INVIERNO</h3>
+                <a  class="btn-whatsapp" href="https://chat.whatsapp.com/Efe5Q7fDTmKDiwziEtD07A?mode=ems_wa_t" target="_blank">
+                <i class="fa-brands fa-whatsapp"></i>
+                </a>
+            </div>
+            <p>La <strong>ubicación</strong> de quedada de las <strong>rutas Alfareras</strong> será en el centro comercial <strong>X-Madrid</strong>, en Alcorcón, en la zona de restauración de la planta de arriba. Hay <strong>fácil aparcamiento</strong>, tanto cubierto (en la planta baja) como al aire libre (en la planta superior). Cualquier <strong>cambio</strong> se comunicará por el <strong>grupo de WhatsApp</strong>.</p>
+        </article>
+    }
+
+    @if (activo === 'verano') {
+        <article class="ubicacion-verano">
+            <div>
+                <i class="fa-solid fa-fire"></i>
+                <h3>UBICACIÓN DE VERANO</h3>
+                <a  class="btn-whatsapp" href="https://chat.whatsapp.com/Efe5Q7fDTmKDiwziEtD07A?mode=ems_wa_t" target="_blank">
+                <i class="fa-brands fa-whatsapp"></i>
+                </a>
+            </div>
+            <p>La <strong>ubicación</strong> de quedada de las rutas Alfareras será en la <strong>pista de patinaje Alfareros Patina</strong>, en Alcorcón. Hay fácil aparcamiento en la misma pista. Cualquier <strong>cambio</strong> se comunicará por el <strong>grupo de WhatsApp</strong>.</p>
+        </article>
+    }
+
+    <article>
+        <div>
+            <i class="fa-solid fa-circle-info"></i>
+            <h3>INFORMACIÓN DE INTERÉS</h3>
+        </div>
+        <p>La <strong>ubicación</strong> de cada ruta <strong>puede variar</strong> según la <strong>climatología</strong> o por votación de los patinadores que vayan a realizarla, según convenga. Cualquier <strong>cambio</strong> se comunicará por el <strong>grupo de WhatsApp</strong>.</p>
+    </article>
+
+
+</article>

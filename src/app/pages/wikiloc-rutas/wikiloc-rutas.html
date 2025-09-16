@@ -1,1 +1,61 @@
-<p>wikiloc-rutas works!</p>
+<section class="titulo-seccion">
+
+    <hgroup>
+        <h2>WIKILOC</h2>
+        <h6>Atento al recorrido ¡que no tiene desperdicio!</h6>
+    </hgroup>
+    <div>
+        <button (click)="toggle('info')" class="btn-info" [class.activo]="activo === 'info'">INFO</button>
+        <button (click)="toggle('mapa')" class="btn-mapa" [class.activo]="activo === 'mapa'">MAPA</button>
+    </div>
+
+</section>
+
+<article class="info container">
+    @if (activo === 'info') {
+        <article class="info-rutas">
+            <div>
+                <h3>RUTA <strong>'PATINAMOS SIN PRISA'</strong> 15-20KM</h3>
+            </div>
+            <p>Esta es la ruta que normalmente hacemos cuando el tiempo lo permite, la Alfarera oficial por así decirlo, aunque vamos variando algún tramo para que no se haga muy monótona. La velocidad y distancia de esta ruta va acorde con los integrantes de la misma. Puedes unirte al grupo de WhatsApp para saber cuál será nuestra siguiente ruta.</p>
+        </article>
+
+        <article class="info-rutas">
+            <div>
+                <h3>RUTA <strong>'ALFAREROS EN EL X-MADRID + CENA'</strong> 20-25KM</h3>
+            </div>
+            <p>Cuando entramos más en invierno, preferimos asegurar el Día Alfarero en X-Madrid (centro comercial en el que se permite patinar), ya que así estamos resguardados del viento y la lluvia. Al terminar la ruta, además, tenemos un sitio cubierto donde poder cenar. En caso de que empiece a llover antes de comenzar la ruta, contamos con el centro comercial para hacer sesión técnica. La velocidad y distancia de esta ruta va acorde con los integrantes de la misma. Puedes unirte al grupo de WhatsApp para saber cuál será nuestra siguiente ruta.</p>
+        </article>
+
+        <article class="info-rutas">
+            <div>
+                <h3>RUTA <strong>'CARACOLERA AUTÓNOMA'</strong> 13-17KM</h3>
+            </div>
+            <p>Nos gusta que todo el mundo pruebe las Alfareras, sus carriles bicis y su ambiente, por lo que cada cierto tiempo o cuando alguien la solicita específicamente se monta esta ruta. La mayor parte del recorrido es por carril bici pero mínimo hay que saber frenar ya que alguna bajada constante tenemos. La velocidad y distancia de esta ruta va acorde con los integrantes de la misma. Puedes unirte al grupo de WhatsApp para saber cuál será nuestra siguiente ruta.</p>
+        </article>
+    }
+
+    @if (activo === 'mapa') {
+        <article class="mapa-rutas">
+            <div>
+                <i class="fa-solid fa-fire"></i>
+                <h3>UBICACIÓN DE VERANO</h3>
+                <a  class="btn-whatsapp" href="https://chat.whatsapp.com/Efe5Q7fDTmKDiwziEtD07A?mode=ems_wa_t" target="_blank">
+                <i class="fa-brands fa-whatsapp"></i>
+                </a>
+            </div>
+            <p>La <strong>ubicación</strong> de quedada de las rutas Alfareras será en la <strong>pista de patinaje Alfareros Patina</strong>, en Alcorcón. Hay fácil aparcamiento en la misma pista. Cualquier <strong>cambio</strong> se comunicará por el <strong>grupo de WhatsApp</strong>.</p>
+        </article>
+    }
+
+    <article>
+        <div>
+            <i class="fa-solid fa-circle-info"></i>
+            <h3>INFORMACIÓN DE INTERÉS</h3>
+        </div>
+        <p>El <strong>recorrido</strong> de la ruta <strong>no es cerrado</strong>, queda en libertad de los organizadores de la ruta la posibilidad de cambiar el recorrido en cualquier momento. Si alguien <strong>no</strong> se encuentra <strong>capaz de continuar</strong> debe <strong>comunicarlo</strong> a uno de los organizadores y <strong>abandonar</strong> la ruta.</p>
+    </article>
+
+
+</article>
+

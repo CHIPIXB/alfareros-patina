@@ -1,0 +1,93 @@
+
+.titulo-seccion {
+    background-image: linear-gradient(rgba(42, 57, 78, 0.479), rgba(0, 0, 0, 0.877)), url(../../../assets/img/ubicacion\(2\).png); 
+    height: 20vh;
+    align-content: center;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    color: var(--color-secundario);
+    font-family: var(--fuente-titulo-hero);
+    text-shadow: 2px 2px 2px black;
+
+    h2{
+        font-size: 50px;
+    }
+    h6{
+        font-size: 20px ;
+    }
+
+    button{
+        border-radius: 5px;
+        padding: 3px;
+        width: 100px;
+        background-color: gray;
+        color: white;
+        text-shadow: 1px 1px 1px black;
+        margin: 5px;
+        font-size: 16px;
+        border: 1px solid gray;
+    }
+    
+
+    .btn-invierno.activo {
+        background: var(--color-principal);
+        color: white;
+        border: 2px solid var(--color-principal);
+
+    }
+    .btn-verano.activo {
+        background: var(--color-secundario);
+        color: white;
+        border: 2px solid var(--color-secundario);
+    }
+}
+
+
+.ubicacion-invierno div i {
+    color: var(--color-principal);
+}
+.ubicacion-verano div i {
+    color: var(--color-secundario);
+}
+
+.ubicacion-invierno p strong {
+    color: var(--color-principal);
+}
+.ubicacion-verano p strong {
+    color: var(--color-secundario);
+}
+
+
+i {
+    font-size: 30px;
+    color: var(--color-principal);
+}
+
+a.btn-whatsapp i.fa-whatsapp {
+    color: #25d366 
+}
+
+.info article div {
+    display: flex;
+    margin: 20px;
+    font-family: var(--fuente-texto);
+
+    h3{
+        align-content: center;
+        margin: 0 10px;
+    }
+}
+
+p {
+    font-family: var(--fuente-texto);
+    font-size: 18px;
+    text-align: justify;
+    margin: 0 20px;
+}
+
+strong {
+    color: var(--color-principal);
+}
+
+
