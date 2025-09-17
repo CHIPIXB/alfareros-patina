@@ -1,0 +1,30 @@
+.arrow {
+    
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+
+    width: 30px;
+    height: 30px;
+
+    border: none;
+    border-radius: 50%;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+
+    background-color: rgba(204, 148, 44, 0.575);
+    backdrop-filter: blur(50px);
+
+}
+
+app-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000; 
+}
+

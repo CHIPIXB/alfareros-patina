@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Header } from "./components/header/header";
 import { Footer } from "./components/footer/footer";
@@ -11,4 +11,19 @@ import { Footer } from "./components/footer/footer";
 })
 export class App {
   protected title = 'Alfareros Patina';
+  showButton = false;
+
+  // Detecta scroll de la ventana
+  @HostListener('window:scroll')
+  onWindowScroll() {
+    this.showButton = window.scrollY > 500; // aparece al bajar 200px
+  }
+
+  // Función para volver arriba
+  scrollToTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }
 }

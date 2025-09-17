@@ -1,3 +1,11 @@
 <app-header></app-header>
+
 <router-outlet />
+
+@if (showButton) {
+    <button class="arrow" (click)="scrollToTop()">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+}
+
 <app-footer></app-footer>
