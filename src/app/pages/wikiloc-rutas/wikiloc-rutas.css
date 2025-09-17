@@ -1,6 +1,6 @@
 
 .titulo-seccion {
-    background-image: linear-gradient(rgba(42, 57, 78, 0.479), rgba(0, 0, 0, 0.877)), url(../../../assets/img/horario.png\(2\).png); 
+    background-image: linear-gradient(rgba(42, 57, 78, 0.479), rgba(0, 0, 0, 0.877)), url(../../../assets/img/wikiloc\(2\).png); 
     height: 20vh;
     align-content: center;
     text-align: center;
@@ -30,13 +30,13 @@
     }
     
 
-    .btn-invierno.activo {
+    .btn-info.activo {
         background: var(--color-principal);
         color: white;
         border: 2px solid var(--color-principal);
 
     }
-    .btn-verano.activo {
+    .btn-mapa.activo {
         background: var(--color-secundario);
         color: white;
         border: 2px solid var(--color-secundario);
@@ -44,28 +44,10 @@
 }
 
 
-.horario-invierno div i {
-    color: var(--color-principal);
-}
-.horario-verano div i {
-    color: var(--color-secundario);
-}
-
-.horario-invierno p strong {
-    color: var(--color-principal);
-}
-.horario-verano p strong {
-    color: var(--color-secundario);
-}
-
 
 i {
     font-size: 30px;
     color: var(--color-principal);
-}
-
-a.btn-whatsapp i.fa-whatsapp {
-    color: #25d366 
 }
 
 .info article div {
