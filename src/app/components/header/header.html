@@ -1,32 +1,37 @@
-<nav class="container">
-    <figure>
-        <a href="">
-            <img src="../../../assets/img/logo-blanco.jpeg" alt="Logo Alfareros" routerLink="/home">
-            <figcaption class="logo-texto">Alfareros <br> Patina</figcaption>
-        </a>
-    </figure>
-
-    <button class="hamburguesa" (click)="toggleMenu()">
-        <div></div>
-        <div></div>
-        <div></div>
-    </button>
+<div class="header">
+    <nav class="menu container">
+        <figure>
+            <a href="">
+                <img src="../../../assets/img/logo-blanco.jpeg" alt="Logo Alfareros" routerLink="/home">
+                <figcaption class="logo-texto">Alfareros <br> Patina</figcaption>
+            </a>
+        </figure>
     
-    <ul  [class.active]="menuAbierto">
-        <li routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
-            <a routerLink="/rutas" (click)="menuAbierto = false">Rutas</a>
-        </li>
-        <li routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
-            <a routerLink="/eventos" (click)="menuAbierto = false">Eventos</a>
-        </li>
-        <li routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
-            <a routerLink="/tienda" (click)="menuAbierto = false">Tienda</a>
-        </li>
-        <li routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
-            <a routerLink="/alfareros" (click)="menuAbierto = false">Alfareros</a>
-        </li>
-        <li routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
-            <a routerLink="/contacto" (click)="menuAbierto = false">Contacto</a>
-        </li>
-    </ul>
-</nav>
+        <div class="menu-hamburguesa">
+            <button class="hamburguesa" (click)="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </button>
+            
+            <ul  [class.active]="menuAbierto">
+                <li routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+                    <a routerLink="/rutas" (click)="menuAbierto = false">Rutas</a>
+                </li>
+                <li routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+                    <a routerLink="/eventos" (click)="menuAbierto = false">Eventos</a>
+                </li>
+                <li routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+                    <a routerLink="/tienda" (click)="menuAbierto = false">Tienda</a>
+                </li>
+                <li routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+                    <a routerLink="/alfareros" (click)="menuAbierto = false">Alfareros</a>
+                </li>
+                <li routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+                    <a routerLink="/contacto" (click)="menuAbierto = false">Contacto</a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+</div>

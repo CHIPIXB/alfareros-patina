@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
@@ -14,4 +14,12 @@ export class Header {
     this.menuAbierto = !this.menuAbierto;
   }
 
+  @HostListener('document:click', ['$event'])
+  clickFuera(event: Event) {
+    const target = event.target as HTMLElement;
+    const dentroMenu = target.closest('.menu-hamburguesa'); 
+    if (!dentroMenu) {
+      this.menuAbierto = false;
+    }
+  }
 }

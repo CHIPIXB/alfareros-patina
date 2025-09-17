@@ -1,8 +1,111 @@
 img {
     width: 100px;
-    cursor: pointer;
+    height: auto;
     padding: 8px;
+    cursor: pointer;
 }
+
+a{
+    text-decoration: none;
+}
+
+.header{
+    background-color: white;
+    width: 100vw;
+    left: 0;
+    padding: 0;
+}
+
+nav.menu {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: auto;
+    align-items: center;
+
+    figure{
+        align-content: center;
+        margin: 0;
+
+        a{
+            display: flex;
+        }
+
+        figcaption {
+            align-content: center;
+            font-family: var(--fuente-titulo-hero);
+            font-size: 25px;
+            color: var(--color-principal);
+        }
+    }
+}
+
+.menu-hamburguesa {
+    position: relative;
+}
+
+button.hamburguesa {
+    width: 50px;
+    height: 50px;
+    justify-items: center;
+    border-radius: 50%;
+    background-color: var(--color-secundario);
+    border: 2px solid black;
+}
+
+.hamburguesa div{
+    width: 20px;
+    height: 3px;
+    margin: 5px;
+    background-color:  var(--color-principal);
+    border-bottom: 1px solid white;
+}
+
+.menu ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 145%;
+    right: 0;
+    background-color:  rgba(212, 145, 21, 0.76) ;
+    justify-content: center;
+    padding: 10px;
+    margin: 0;
+    border-radius: 10px;
+    width: 50vw;
+
+        li {
+            text-align: center;
+            padding: 6px;
+            margin: 6px;
+            background-color: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(50px);
+            border-radius: 10px;
+
+            border-bottom: 2px solid white;
+            border-left: 2px solid var(--color-principal);
+            border-right: 2px solid var(--color-principal);
+            border-radius: 10px;
+
+                a {
+                    font-family: var(--fuente-titulo);
+                    font-size: 18px;
+                    color: var(--color-principal);
+                }
+        }
+
+}
+
+.menu ul.active {
+    display: flex;
+}
+
+
+
+
+
+
+/* 
 
 nav{
     display: flex;
@@ -66,7 +169,7 @@ nav{
 
 nav ul li.active a {
     color: rgb(25, 127, 212);
-    /* border-bottom: 2px solid rgba(245, 184, 71, 0.836); */
+    border-bottom: 2px solid rgba(245, 184, 71, 0.836);
     }
 
 .hamburguesa {
@@ -130,22 +233,6 @@ nav ul li.active a {
         display: block;
     }
 
-
-    button {
-        border: 2px solid black;
-        border-radius: 50%;
-        padding: 6px;
-        background-color:rgb(204, 147, 44);
-    }
-
-    div{
-        width: 20px;
-        height: 3px;
-        border-radius: 10px;
-        margin: 5px;
-        background-color:   rgb(25, 127, 212) ;
-        border-bottom: 1px solid white;
-    }
 }
 
 @media (max-width: 425px) {
@@ -155,4 +242,4 @@ nav ul li.active a {
         }
     }
 }
-
+ */
