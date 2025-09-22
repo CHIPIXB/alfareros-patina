@@ -6,3 +6,93 @@
     </hgroup>
 
 </section>
+
+<section class="pedido container">
+    <h2>Pedir material</h2>
+
+    <form [formGroup]="pedidoForm" (ngSubmit)="onSubmit()" class="pedido-form">
+        <!-- Nombre -->
+        <div class="mb-3">
+        <label for="nombre" class="form-label">Nombre</label>
+        <input id="nombre" type="text" class="form-control" formControlName="nombre">
+        @if (pedidoForm.get('nombre')?.invalid && pedidoForm.get('nombre')?.touched) {
+            <div class="text-danger">
+            El nombre es obligatorio y debe tener al menos 3 caracteres.
+            </div>
+        }
+        </div>
+
+        <!-- Teléfono -->
+        <div class="mb-3">
+        <label for="telefono" class="form-label">Teléfono</label>
+        <input id="telefono" type="tel" class="form-control" formControlName="telefono">
+        @if (pedidoForm.get('telefono')?.invalid && pedidoForm.get('telefono')?.touched) {
+            <div class="text-danger">
+            Introduce un teléfono válido (9 dígitos).
+            </div>
+        }
+        </div>
+
+        <!-- Prenda -->
+        <div class="mb-3">
+        <label for="prenda" class="form-label">Prenda</label>
+        <select id="prenda" class="form-select" formControlName="prenda">
+            <option value="">Selecciona una prenda</option>
+            <option value="camiseta-algodon">Camiseta de algodón</option>
+            <option value="camiseta-tecnica">Camiseta técnica</option>
+            <option value="sudadera-capucha">Sudadera con capucha</option>
+            <option value="mochila">Mochila</option>
+            <option value="chaleco">Chaleco</option>
+            <option value="chaqueta">Chaqueta</option>
+            <option value="sudadera-cremallera">Sudadera con cremallera</option>
+        </select>
+        @if (pedidoForm.get('prenda')?.invalid && pedidoForm.get('prenda')?.touched) {
+            <div class="text-danger">
+            Selecciona una prenda.
+            </div>
+        }
+        </div>
+
+        <!-- Color (solo aparece si es camiseta técnica) -->
+        @if (pedidoForm.get('prenda')?.value === 'camiseta-tecnica') {
+        <div class="mb-3">
+            <label for="color" class="form-label">Color</label>
+            <select id="color" class="form-select" formControlName="color">
+            <option value="">Selecciona un color</option>
+            <option value="negro">Negro</option>
+            <option value="rosa">Rosa</option>
+            <option value="coral">Coral</option>
+            <option value="verde">Verde</option>
+            </select>
+            @if (pedidoForm.get('color')?.invalid && pedidoForm.get('color')?.touched) {
+            <div class="text-danger">
+                El color es obligatorio.
+            </div>
+            }
+        </div>
+        }
+
+        <!-- Talla -->
+        <div class="mb-3">
+        <label for="talla" class="form-label">Talla</label>
+        <input id="talla" type="text" class="form-control" formControlName="talla">
+        @if (pedidoForm.get('talla')?.invalid && pedidoForm.get('talla')?.touched) {
+            <div class="text-danger">
+            La talla es obligatoria.
+            </div>
+        }
+        </div>
+
+        <!-- Observaciones -->
+        <div class="mb-3">
+        <label for="observaciones" class="form-label">Observaciones</label>
+        <textarea id="observaciones" class="form-control" rows="3" formControlName="observaciones"></textarea>
+        </div>
+
+        <!-- Botón -->
+        <button type="submit" class="btn btn-primary" [disabled]="pedidoForm.invalid">
+        Enviar pedido
+        </button>
+    </form>
+</section>
+
