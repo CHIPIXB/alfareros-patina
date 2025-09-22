@@ -13,69 +13,115 @@
 
 <article class="info container">
     @if (activo === 'info') {
-        <article class="info-rutas">
-            <div>
-                <i class="fa-solid fa-person-skating"></i>
-                <h3>RUTA <strong>'PATINAMOS SIN PRISA'</strong> 15-20KM</h3>
-            </div>
-            <p>Esta es la ruta que normalmente hacemos cuando el tiempo lo permite, la Alfarera oficial por así decirlo, aunque vamos variando algún tramo para que no se haga muy monótona. La velocidad y distancia de esta ruta va acorde con los integrantes de la misma. Puedes unirte al grupo de WhatsApp para saber cuál será nuestra siguiente ruta.</p>
-        </article>
 
-        <article class="info-rutas">
-            <div>
-                <i class="fa-solid fa-xmark"></i>
-                <h3>RUTA <strong>'ALFAREROS EN EL X-MADRID + CENA'</strong> 20-25KM</h3>
-            </div>
-            <p>Cuando entramos más en invierno, preferimos asegurar el Día Alfarero en X-Madrid (centro comercial en el que se permite patinar), ya que así estamos resguardados del viento y la lluvia. Al terminar la ruta, además, tenemos un sitio cubierto donde poder cenar. En caso de que empiece a llover antes de comenzar la ruta, contamos con el centro comercial para hacer sesión técnica. La velocidad y distancia de esta ruta va acorde con los integrantes de la misma. Puedes unirte al grupo de WhatsApp para saber cuál será nuestra siguiente ruta.</p>
-        </article>
+        <div class="rutas">
+            <article class="info-rutas">
+                <div>
+                    <i class="fa-solid fa-users"></i>
+                    <h3>RUTA <strong>'CARACOLERA AUTÓNOMA'</strong> 13-17KM</h3>
+                </div>
+                <p>Nos gusta que todo el mundo pruebe las Alfareras, sus carriles bicis y su ambiente, por lo que cada cierto tiempo o cuando alguien la solicita específicamente se monta esta ruta. La mayor parte del recorrido es por carril bici pero mínimo hay que saber frenar ya que alguna bajada constante tenemos. La velocidad y distancia de esta ruta va acorde con los integrantes de la misma. Puedes unirte al grupo de WhatsApp para saber cuál será nuestra siguiente ruta.</p>
+            </article>
+    
+            <article class="info-rutas">
+                <div>
+                    <i class="fa-solid fa-person-skating"></i>
+                    <h3>RUTA <strong>'PATINAMOS SIN PRISA'</strong> 15-20KM</h3>
+                </div>
+                <p>Esta es la ruta que normalmente hacemos cuando el tiempo lo permite, la Alfarera oficial por así decirlo, aunque vamos variando algún tramo para que no se haga muy monótona. La velocidad y distancia de esta ruta va acorde con los integrantes de la misma. Puedes unirte al grupo de WhatsApp para saber cuál será nuestra siguiente ruta.</p>
+            </article>
+    
+            <article class="info-rutas">
+                <div>
+                    <i class="fa-solid fa-xmark"></i>
+                    <h3>RUTA <strong>'ALFAREROS EN EL X-MADRID + CENA'</strong> 20-25KM</h3>
+                </div>
+                <p>Cuando entramos más en invierno, preferimos asegurar el Día Alfarero en X-Madrid (centro comercial en el que se permite patinar), ya que así estamos resguardados del viento y la lluvia. Al terminar la ruta, además, tenemos un sitio cubierto donde poder cenar. En caso de que empiece a llover antes de comenzar la ruta, contamos con el centro comercial para hacer sesión técnica. La velocidad y distancia de esta ruta va acorde con los integrantes de la misma. Puedes unirte al grupo de WhatsApp para saber cuál será nuestra siguiente ruta.</p>
+            </article>
+    
+            <article class="info-rutas">
+                <div>
+                    <i class="fa-solid fa-fire-flame-curved"></i>
+                    <h3>RUTA <strong>'ALFARERA A FUEGO'</strong> 25-30KM</h3>
+                </div>
+                <p>Esta ruta es especial porque no se publica, no se prevee, esta ruta surge. Normalmente vamos con la intención de hacer Alfareros en el X-Madrid o patinamos sin prisa pero cuando vamos terminando la ruta a los integrantes les apetece seguir patinando, y se alarga unos kilómetros. La velocidad y distancia de esta ruta va acorde con los integrantes de la misma. Puedes unirte al grupo de WhatsApp para saber cuál será nuestra siguiente ruta.</p>
+            </article>
 
-        <article class="info-rutas">
-            <div>
-                <i class="fa-solid fa-users"></i>
-                <h3>RUTA <strong>'CARACOLERA AUTÓNOMA'</strong> 13-17KM</h3>
-            </div>
-            <p>Nos gusta que todo el mundo pruebe las Alfareras, sus carriles bicis y su ambiente, por lo que cada cierto tiempo o cuando alguien la solicita específicamente se monta esta ruta. La mayor parte del recorrido es por carril bici pero mínimo hay que saber frenar ya que alguna bajada constante tenemos. La velocidad y distancia de esta ruta va acorde con los integrantes de la misma. Puedes unirte al grupo de WhatsApp para saber cuál será nuestra siguiente ruta.</p>
-        </article>
+        </div>
     }
 
     @if (activo === 'mapa') {
-        <article class="mapa-rutas">
-            <h3>MAPA DE RUTAS</h3>
 
-            <div id="carouselX-madrid" class="carousel slide">
+        <div class="titulo">
+            <h6>RECORRIDOS DE LAS RUTAS</h6>
+            <p>A continuación te mostramos un ejemplo de los recorridos que hemos realizado. Si quieres ver más puedes visitar el wikiloc personal en la sección 
+                <a routerLink="/alfareros">Alfareros</a> 
+            </p>
+        </div>
 
-                <div class="carousel-inner">
 
-                    <div class="carousel-item active">
-                        <img src="../../../assets/img/wikiloc/x-madrid/x-madrid-20.3km.png" alt="...">
-                    </div>
+        <div class="mapas">
 
-                    <div class="carousel-item">
-                        <img src="../../../assets/img/wikiloc/x-madrid/x-madrid-21.2km.png" alt="...">
-                    </div>
+            <div id="carouselRutas" class="carousel slide" data-bs-ride="carousel"  data-bs-touch="true">
 
-                    <div class="carousel-item">
-                        <img src="../../../assets/img/wikiloc/x-madrid/x-madrid-22.9km.png" alt="...">
-                    </div>
-
-                    <div class="carousel-item">
-                        <img src="../../../assets/img/wikiloc/x-madrid/x-madrid-23.5km.png" alt="...">
-                    </div>
-
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselRutas" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselRutas" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselRutas" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselRutas" data-bs-slide-to="3" aria-label="Slide 4"></button>
                 </div>
 
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselX-madrid" data-bs-slide="prev">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="../../../assets/img/wikiloc/caracolera-autonoma-10.8km.png" class="d-block w-100" alt="Slide 1">
+
+                        <div class="carousel-caption">
+                            <h5>Caracolera Autónoma 10.8km</h5>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <img src="../../../assets/img/wikiloc/psp-15.9km.png" class="d-block w-100" alt="Slide 2">
+                        
+                        <div class="carousel-caption">
+                            <h5>Patinamos Sin Prisa 15.9km</h5>
+                        </div>
+                        
+                    </div>
+
+                    <div class="carousel-item">
+                        <img src="../../../assets/img/wikiloc/x-madrid-20.3km.png" class="d-block w-100" alt="Slide 3">
+
+                        <div class="carousel-caption">
+                            <h5>X-Madrid 20.3km</h5>
+                        </div>
+
+                    </div>
+
+                    <div class="carousel-item">
+
+                        <img src="../../../assets/img/wikiloc/aaf-37.3km.png" class="d-block w-100" alt="Slide 3">
+
+                        <div class="carousel-caption">
+                            <h5>Alfareros a Fuego 37.3km</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselRutas" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
+                    <span class="visually-hidden">Anterior</span>
                 </button>
 
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselX-madrid" data-bs-slide="next">
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselRutas" data-bs-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
+                    <span class="visually-hidden">Siguiente</span>
                 </button>
-
+                
             </div>
-        </article>
+
+        </div>
+
     }
     <article>
         <div>
