@@ -30,3 +30,188 @@
         text-shadow: 2px 2px 2px  rgb(180, 131, 39) ;
     }
 }
+
+
+/* === Mobile first (por defecto) === */
+.seccion-enlaces {
+  padding: 2rem 1rem;
+  background-color: #f8f9fa;
+  text-align: center;
+}
+
+.contenedor-enlaces {
+  display: grid;
+  grid-template-columns: 1fr;         /* 1 columna en móvil */
+  gap: 1rem;                          /* separaciones cómodas en móvil */
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.enlace {
+  display: block;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.18);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  -webkit-tap-highlight-color: transparent; /* mejor UX en móvil */
+}
+
+.enlace figure {
+  position: relative;
+  margin: 0;
+}
+
+.enlace img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  aspect-ratio: 16/9;                 /* mantiene proporción */
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+/* Texto encima de la imagen: visible siempre en móvil para legibilidad */
+.enlace figcaption {
+  position: absolute;
+  inset: 0 0 auto 0;                  /* pegado abajo */
+  min-height: 3rem;
+  display: grid;
+  place-items: center;
+  padding: 0.75rem 1rem;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #fff;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.55), rgba(0,0,0,0.05));
+  letter-spacing: .3px;
+  /* En móvil no usamos hover -> siempre visible */
+  opacity: 1;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7); 
+}
+
+/* Respeto a usuarios con reducción de movimiento */
+@media (prefers-reduced-motion: reduce) {
+  .enlace,
+  .enlace img {
+    transition: none;
+  }
+}
+
+/* === Desktop / tablets medianas === */
+@media (min-width: 768px) {
+  .seccion-enlaces {
+    padding: 3rem 1.5rem;
+  }
+
+  .contenedor-enlaces {
+    grid-template-columns: repeat(2, 1fr);  /* 2 columnas en tablet */
+    gap: 1.25rem;
+  }
+
+  /* En pantallas con hover, el caption puede aparecer al pasar el ratón */
+  @media (hover: hover) and (pointer: fine) {
+    .enlace figcaption {
+      inset: 0;                              /* centrado */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(0,0,0,0.45);
+      opacity: 0;
+      transition: opacity 0.25s ease;
+    }
+    .enlace:hover figcaption {
+      opacity: 1;
+    }
+    .enlace:hover img {
+      transform: scale(1.04);
+    }
+    .enlace:hover {
+      box-shadow: 0 8px 28px rgba(0,0,0,0.28);
+      transform: translateY(-2px);
+    }
+  }
+}
+
+/* === Desktop grande (2 filas de 2 imágenes) === */
+@media (min-width: 1200px) {
+  .contenedor-enlaces {
+    grid-template-columns: repeat(2, 1fr);  /* 2 columnas grandes */
+    gap: 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .enlace {
+    transform: none;
+    border-radius: 18px;
+  }
+
+  .enlace img {
+    aspect-ratio: 16/10; /* un poco más panorámica */
+    object-fit: cover;
+  }
+
+  .enlace:hover {
+    transform: scale(1.04);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+  }
+
+  .enlace figcaption {
+    font-size: 1.4rem;
+    padding: 1rem 1.5rem;
+    letter-spacing: .5px;
+  }
+}
+
+/* === Desktop grande (2 columnas grandes) === */
+@media (min-width: 1200px) {
+  .contenedor-enlaces {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .enlace {
+    border-radius: 18px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .enlace img {
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    display: block;
+  }
+
+  .enlace:hover {
+    transform: scale(1.04);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+  }
+
+  .enlace figcaption {
+    font-size: 1.4rem;
+    padding: 1rem 1.5rem;
+    letter-spacing: 0.5px;
+  }
+}
+
+/* === Ultra-wide (monitores grandes: 1600px en adelante) === */
+@media (min-width: 1600px) {
+  .contenedor-enlaces {
+    max-width: 1500px;        /* más ancho */
+    gap: 2.5rem;              /* más espacio entre tarjetas */
+  }
+
+  .enlace img {
+    aspect-ratio: 5/3;        /* ligeramente más panorámicas */
+  }
+
+  .enlace figcaption {
+    font-size: 1.6rem;
+  }
+}
+
+
+
+
