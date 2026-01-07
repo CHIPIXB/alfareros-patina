@@ -8,12 +8,12 @@
 </section>
 
 <section class="pedido container">
-    <h2>Pedir material</h2>
+    <h4>PIDE TU MERCHAN ALFARERO</h4>
 
     <form [formGroup]="pedidoForm" (ngSubmit)="onSubmit()" class="pedido-form">
         <!-- Nombre -->
         <div class="mb-3">
-        <label for="nombre" class="form-label">Nombre</label>
+        <label for="nombre" class="form-label">Nombre y apellidos</label>
         <input id="nombre" type="text" class="form-control" formControlName="nombre">
         @if (pedidoForm.get('nombre')?.invalid && pedidoForm.get('nombre')?.touched) {
             <div class="text-danger">
@@ -72,16 +72,22 @@
         </div>
         }
 
-        <!-- Talla -->
-        <div class="mb-3">
-        <label for="talla" class="form-label">Talla</label>
-        <input id="talla" type="text" class="form-control" formControlName="talla">
-        @if (pedidoForm.get('talla')?.invalid && pedidoForm.get('talla')?.touched) {
-            <div class="text-danger">
-            La talla es obligatoria.
+        @if (pedidoForm.get('prenda')?.value && pedidoForm.get('prenda')?.value !== 'mochila') {
+            <div class="mb-3">
+                <label for="talla" class="form-label">Talla</label>
+                <select id="talla" class="form-select" formControlName="talla">
+                <option value="">Selecciona tu talla</option>
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+                <option value="2XL">2XL</option>
+                </select>
+                @if (pedidoForm.get('talla')?.invalid && pedidoForm.get('talla')?.touched) {
+                <div class="text-danger">La talla es obligatoria.</div>
+                }
             </div>
         }
-        </div>
 
         <!-- Observaciones -->
         <div class="mb-3">
