@@ -88,6 +88,9 @@ strong {
     }
 }
 
+a {
+    color: var(--color-secundario);
+}
 
 
 
