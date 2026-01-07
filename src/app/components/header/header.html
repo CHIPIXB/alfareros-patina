@@ -8,7 +8,7 @@
         </figure>
     
         <div class="menu-hamburguesa">
-            <button class="hamburguesa" (click)="toggleMenu()">
+            <button class="hamburguesa" [class.open]="menuAbierto" (click)="toggleMenu()">
                 <div></div>
                 <div></div>
                 <div></div>

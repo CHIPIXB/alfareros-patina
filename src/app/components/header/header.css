@@ -29,8 +29,7 @@ nav.menu {
         margin: 0;
 
         a{
-            display: flex;
-            
+            display: flex;    
         }
 
         figcaption {
@@ -62,6 +61,20 @@ button.hamburguesa {
     margin: 5px;
     background-color:  var(--color-principal);
     /* border-bottom: 1px solid white; */
+    transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55), opacity 0.3s ease;
+}
+
+/* Estado abierto */
+.hamburguesa.open div:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburguesa.open div:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburguesa.open div:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
 }
 
 .menu ul {
