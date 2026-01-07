@@ -36,23 +36,7 @@ a {
     text-decoration: none;
 }
 
-/* .titulo-rutas {
-    text-align: center;
-    margin: 20px 0;
-    font-family: var(--fuente-titulo);
-    
-    h3{
-        color:  rgb(25, 127, 212);
-        font-size: 30px;
-    }
-    
-    p{
-        color: var(--color-secundario) ;
-    }
-} */
-
-.imagenes-logo ul li a,
-.imagenes-foto ul li a {
+.imagenes-logo ul li a {
     display: block;
     width: 100%;
     height: 100%;
@@ -61,7 +45,7 @@ a {
     cursor: pointer;
 }
 
-.imagenes-logo ul li, .imagenes-foto ul li {
+.imagenes-logo ul li {
     font-family: var(--fuente-texto);
     margin: 20px;
     border-radius: 10px;
@@ -87,7 +71,3 @@ a {
     background-color: rgba(163, 183, 219, 0.212);
 }
 
-.imagenes-foto ul li {
-    border: 2px solid rgb(163, 183, 219);
-    background-color: rgba(219, 200, 163, 0.288)
-}
