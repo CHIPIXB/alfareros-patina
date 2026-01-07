@@ -1,5 +1,5 @@
 h3{
-        font-family: var(--fuente-titulo);
+        font-family: var(--fuente-texto);
         margin: 50px 0 0 0;
         font-size: 30px;
         color:  var(--color-principal);
@@ -7,7 +7,7 @@ h3{
     }
 
 h6{
-    font-family: var(--fuente-titulo);
+    font-family: var(--fuente-texto);
     text-align: center;
     color: var(--color-secundario);
     margin: 15px;
@@ -49,7 +49,7 @@ strong.titulo {
 .sobre-nosotros{
     text-align: center;
     h3{
-        font-family: var(--fuente-titulo);
+        font-family: var(--fuente-texto);
         margin: 15px;
         font-size: 30px;
         color:  var(--color-principal);
@@ -87,6 +87,8 @@ strong.titulo {
         object-position: center;
         margin: 0 20px;
         border-radius: 20px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
 }
