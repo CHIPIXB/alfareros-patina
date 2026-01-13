@@ -1,6 +1,6 @@
 h3{
         font-family: var(--fuente-texto);
-        margin: 50px 0 0 0;
+        margin: 20px 0 0 0;
         font-size: 30px;
         color:  var(--color-principal);
         text-align: center;
@@ -73,6 +73,14 @@ strong.titulo {
 }
 
 .imagenes-hero {
+    
+    figure {
+    
+        div{
+            width: 100%;
+            margin-bottom: 20px;
+        }
+    }
 
     .images {
         display: flex;
@@ -86,7 +94,7 @@ strong.titulo {
         object-fit: cover;
         object-position: center;
         margin: 0 20px;
-        border-radius: 20px;
+        border-radius: 10px;
         box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
         transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
@@ -152,41 +160,38 @@ strong.titulo {
 
 @media (min-width: 768px){
     .imagenes-hero {
-        a {
-            img{
-                width: 500px;
-                height: 400px;
-            }
-        }
+
         .texto-imagen {
             justify-self: center;
+        }
+
+        figure {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+
+            div {
+                width: calc(50% - 10px);
+            }
         }
         
     }
 }
 
 @media (min-width: 992px){
-        .imagenes-hero {
-        a {
-            img{
-                width: 600px;
-                height: 400px;
+    .imagenes-hero {
+
+        figure {
+            justify-content: center;
+            div {
+                width: calc(33.33% - 13.3px);
+                margin-bottom: 0;
             }
         }
         
     }
 }
 
-@media (min-width: 1024px){
-
-    .eventos-hero {
-        button:hover {
-            color:  white;
-            background-color:  var(--color-secundario) ;
-            border: 2px solid var(--color-secundario);
-        }
-    }
-}
 
 @media ( min-width: 1200px) {
     .imagenes-hero {
@@ -247,13 +252,8 @@ strong.titulo {
 
 @media (min-width: 1440px){
 
-    .imagenes-hero {
-        figure{
-            place-content: center;
-        }
-        img {
-            width: 500px;  
-        }
+    .imagenes-hero figure > div {
+        width: calc(25% - 15px);
     }
 
 }
