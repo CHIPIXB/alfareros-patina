@@ -34,7 +34,26 @@ img {
 
 a {
     text-decoration: none;
+
+    figure {
+        display: flex;
+        justify-content: space-around;
+
+        figcaption {
+            align-content: center;
+        }
+    }
+
+    p{
+        text-align: center;
+    }
 }
+
+ul {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
 
 .imagenes-logo ul li a {
     display: block;
@@ -60,7 +79,7 @@ a {
     }
 
     p{
-        font-size: 18px;
+        font-size:20px;
         color: var(--color-secundario);
     }
 
@@ -69,5 +88,57 @@ a {
 .imagenes-logo ul li {
     border: 2px solid rgb(219, 200, 163);
     background-color: rgba(163, 183, 219, 0.212);
+}
+
+@media (min-width: 768px) {
+    li {
+        width: 75%;
+        place-self: center;
+    }
+}
+
+@media (min-width: 992px) {
+    ul {
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+    }
+    li {
+        justify-self: center;
+        transform: scale(1);
+        transition: transform 0.3s;
+
+
+            &:hover {
+            transform: scale(1.03);
+        }
+    }
+
+    .imagenes-logo ul li:hover{
+    border: 2px solid rgb(163, 145, 105);
+    background-color: rgba(102, 124, 163, 0.212);
+}
+
+}
+
+@media (min-width: 1200px) {
+    ul {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+    li {
+        width: 100%;
+
+    }
+}
+
+@media (min-width: 1440px) {
+    ul {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+
+    li {
+        width: 100%;
+    }
 }
 

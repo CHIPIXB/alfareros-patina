@@ -93,3 +93,9 @@ strong {
 .mapa {
     justify-content: center;
 }
+
+@media (min-width: 992px) {
+    p {
+        font-size: 20px;
+    }
+}
