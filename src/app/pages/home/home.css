@@ -1,10 +1,10 @@
 h3{
-        font-family: var(--fuente-texto);
-        margin: 20px 0 0 0;
-        font-size: 30px;
-        color:  var(--color-principal);
-        text-align: center;
-    }
+    font-family: var(--fuente-texto);
+    margin: 20px 0 0 0;
+    font-size: 30px;
+    color:  var(--color-principal);
+    text-align: center;
+}
 
 h6{
     font-family: var(--fuente-texto);
@@ -46,6 +46,8 @@ strong.titulo {
     }
 }
 
+
+
 .sobre-nosotros{
     text-align: center;
     h3{
@@ -73,187 +75,110 @@ strong.titulo {
 }
 
 .imagenes-hero {
-    
-    figure {
-    
-        div{
-            width: 100%;
-            margin-bottom: 20px;
-        }
-    }
-
-    .images {
-        display: flex;
-        justify-content: center;
-    }
-
-    img{
-        width: 300px;
-        height: 200px;
-        display: block;
-        object-fit: cover;
-        object-position: center;
-        margin: 0 20px;
-        border-radius: 10px;
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
+    padding: 2rem 1rem;
+    text-align: center;
+    width: 100%;
 }
 
-.eventos-hero {
-    font-family: var(--fuente-texto);
+.contenedor-enlaces {
+    display: grid;
+    grid-template-columns: 1fr;         /* 1 columna en móvil */
+    gap: 1rem;                          /* separaciones cómodas en móvil */
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.enlace {
+    display: block;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.18);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    -webkit-tap-highlight-color: transparent; /* mejor UX en móvil */
+}
+
+.enlace figure {
+    position: relative;
+    margin: 0;
+}
+
+.enlace img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: 16/9;                 /* mantiene proporción */
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.enlace figcaption {
+    position: absolute;
+    inset: 0 0 auto 0;                  /* pegado abajo */
+    min-height: 3rem;
+    display: grid;
     place-items: center;
+    padding: 0.75rem 1rem;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1rem;
+    color: #fff;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.55), rgba(0,0,0,0.05));
+    letter-spacing: .3px;
+    /* En móvil no usamos hover -> siempre visible */
+    opacity: 1;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7); 
+}
 
-    .eventos-lista {
-        margin-top: 40px;
-    }
 
-    article {
-        /* display: flex; */
-        margin: 0 auto;
-        max-width: 100%;
-        height: auto;
-        text-align: center;
-    }
-
-    figure{
-        /* align-self: center; */
-        text-align: center;
-    }
-    
-    img {
-        border-radius: 10px;
-    }
-
-    h5{
-        font-size: 22px;
-        color:  var(--color-principal);
-    }
-
-    p {
-        font-size: 18px;
-        margin: 20px 0;
-    }
-
-    div figure a img {
-        width: 150px;
-        height: 150px;
-        object-fit: cover;
-    }
-
-    .texto-evento {
-        margin: 30px;
-        border-bottom: 2px solid var(--color-secundario);
-    }
-
-    button {
-        background-color: var(--color-principal);
-        border-radius: 8px;
-        border: 2px solid var(--color-principal);
-        transition: 0.5s;
-        padding: 8px 15px;
-        margin-bottom: 20px;
-
+@media (min-width: 576px){
+    .imagenes-hero {
+        width: 80%;
+        justify-self: center;
     }
 }
 
 @media (min-width: 768px){
-    .imagenes-hero {
-
-        .texto-imagen {
-            justify-self: center;
-        }
-
-        figure {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-
-            div {
-                width: calc(50% - 10px);
-            }
-        }
-        
+    .contenedor-enlaces {
+        grid-template-columns: repeat(2, 1fr);
     }
+    .imagenes-hero {
+        width: 100%;
+    }
+
+        .sobre-nosotros {
+        h3{
+            font-size: 35px;
+        }
+        .parrafos p{
+            font-size: 20px ;
+        }
+    }
+
 }
 
 @media (min-width: 992px){
-    .imagenes-hero {
-
-        figure {
-            justify-content: center;
-            div {
-                width: calc(33.33% - 13.3px);
-                margin-bottom: 0;
-            }
-        }
-        
+    .contenedor-enlaces {
+        grid-template-columns: repeat(2, 1fr);
     }
+    .imagenes-hero {
+        width: 80%;
+    }
+
+    .sobre-nosotros {
+        h3{
+            font-size: 40px;
+        }
+        .parrafos p{
+            font-size: 22px ;
+        }
+    }
+
 }
 
 
 @media ( min-width: 1200px) {
-    .imagenes-hero {
-        figure{
-            display: flex;
-            
-            }
-            div .texto-imagen {
-                width: 600px;
-            }
-        } 
-
-    .eventos-lista {
-        display: flex;
-    }
-    article {
-        display: flex;
-        margin: 50px 20px;
-    }
-
-    figure{
-        align-self: center;
-    }
-    
-    img {
-        border-radius: 10px;
-    }
-
-    h5{
-        font-size: 22px;
-        color: var(--color-principal);
-    }
-
-    p {
-        font-size: 18px;
-        margin: 20px 0;
-    }
-
-    div figure a img {
-        width: 150px;
-        height: 150px;
-        object-fit: cover;
-    }
-
-    .texto-evento {
-        margin: 0 20px;
-    }
-
-    button {
-        background-color:  var(--color-principal);
-        border-radius: 8px;
-        border: 2px solid var(--color-principal) ;
-        transition: 0.5s;
-        padding: 8px 15px;
-
+    .contenedor-enlaces {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media (min-width: 1440px){
-
-    .imagenes-hero figure > div {
-        width: calc(25% - 15px);
-    }
-
-}

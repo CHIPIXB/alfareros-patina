@@ -22,55 +22,36 @@
 
 <section class="imagenes-hero">
 
-    <figure class="container">
-        <div class="texto-imagen-rutas">
-            <hgroup>
-                <h3>Rutas</h3>
-                <h6>¿Quieres saber más? ¡Pincha en la imagen!</h6>
-            </hgroup>
+<div class="contenedor-enlaces">
 
-            <nav class="images">
-                <a [routerLink]="['/rutas']">
-                    <img src="../../../assets/img/portada-rutas.jpeg" alt="rutas-alfareras">
-                </a>
-            </nav>
-        </div>
-        <div class="texto-imagen-eventos">
-            <hgroup>
-                <h3>Eventos</h3>
-                <h6>¿Quieres saber más? ¡Pincha en la imagen!</h6>
-            </hgroup>
+        <a [routerLink]="['/rutas']" class="enlace">
+            <figure>
+                <img src="../../../assets/img/portada-rutas.jpeg" alt="rutas-alfareras">
+                    <figcaption>RUTAS</figcaption>
+            </figure>
+        </a>
 
-            <nav class="images">
-                <a [routerLink]="['/eventos']">
-                    <img src="../../../assets/img/aniversario-alfarero.png" alt="rutas-alfareras">
-                </a>
-            </nav>
-        </div>
-        <div class="texto-imagen-tienda">
-            <hgroup>
-                <h3>Merchandising</h3>
-                <h6>¿Quieres saber más? ¡Pincha en la imagen!</h6>
-            </hgroup>
-            <nav class="images">
-                <a [routerLink]="['/tienda']">
-                    <img src="../../../assets/img/merchan-home.png" alt="tienda-alfarera">
-                </a>
-            </nav>
+        <a [routerLink]="['/eventos']" class="enlace">
+            <figure>
+                <img src="../../../assets/img/aniversario-alfarero.png" alt="rutas-alfareras">
+                <figcaption>EVENTOS</figcaption>
+            </figure>
+        </a>
 
-        </div>
-        <div class="texto-imagen-alfareros">
-            <hgroup>
-                <h3>Alfareros</h3>
-                <h6>¿Quieres saber más? ¡Pincha en la imagen!</h6>
-            </hgroup>
-            <nav class="images">
-                <a [routerLink]="['/alfareros']">
-                    <img src="../../../assets/img/alfareros-portada.jpg" alt="alfareros">
-                </a>
-            </nav>
+        <a [routerLink]="['/tienda']"class="enlace">
+            <figure>
+                <img src="../../../assets/img/merchan-home.png" alt="tienda-alfarera">
+                <figcaption>MERCHAN</figcaption>
+            </figure>
+        </a>
 
-        </div>
-    </figure>
+        <a [routerLink]="['/alfareros']" class="enlace">
+            <figure>
+                <img src="../../../assets/img/alfareros-portada.jpg" alt="alfareros">
+                <figcaption>ALFAREROS</figcaption>
+            </figure>
+        </a>
+
+    </div>
 
 </section>
