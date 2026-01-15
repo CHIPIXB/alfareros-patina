@@ -1,8 +1,8 @@
 <div class="header">
     <nav class="menu container">
         <figure>
-            <a href="">
-                <img src="../../../assets/img/logo-blanco.jpeg" alt="Logo Alfareros" routerLink="/home">
+            <a routerLink="/home">
+                <img src="../../../assets/img/logo-blanco.jpeg" alt="Logo Alfareros">
                 <figcaption class="logo-texto">Alfareros <br> Patina</figcaption>
             </a>
         </figure>
@@ -15,6 +15,9 @@
             </button>
             
             <ul  [class.active]="menuAbierto">
+                <li class="solo-desktop" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+                    <a routerLink="/home" (click)="menuAbierto = false">Inicio</a>
+                </li>
                 <li routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
                     <a routerLink="/rutas" (click)="menuAbierto = false">Rutas</a>
                 </li>

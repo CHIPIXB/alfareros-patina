@@ -98,11 +98,6 @@ button.hamburguesa {
             backdrop-filter: blur(50px);
             border-radius: 10px;
 
-            border-bottom: 2px solid white;
-            border-left: 2px solid var(--color-principal);
-            border-right: 2px solid var(--color-principal);
-            border-radius: 10px;
-
                 a {
                     display: block;
                     width: 100%;
@@ -117,4 +112,38 @@ button.hamburguesa {
 
 .menu ul.active {
     display: flex;
+}
+
+.solo-desktop {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .menu-hamburguesa button {
+        display: none;
+    }
+
+    .menu ul {
+        display: flex;
+        position: static;
+        flex-direction: row;
+        background: none;
+        width: auto;
+    }
+
+    .menu ul li:hover {
+        transform: scale(1.05);
+        transition: 0.3s;
+    }
+
+    .menu ul li a:hover {
+        color: var(--color-principal);
+        transition: 0.2s;
+    }
+}
+
+@media (min-width: 992px) {
+    .solo-desktop {
+        display: block;
+    }
 }
